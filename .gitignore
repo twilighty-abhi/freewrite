@@ -1,66 +1,53 @@
-//
-//  .gitignore
-//  freewrite
-//
-//  Created by thorfinn on 4/5/25.
-//
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Xcode
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build and packaging output
 build/
-DerivedData/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata/
-*.xccheckout
-*.moved-aside
-*.xcuserstate
+dist/
+dist-deb/
+Freewrite-ubuntu/
+Freewrite-ubuntu.tar.gz
+*.spec.bak
+*.manifest
+*.toc
+xref-*.html
+warn-*.txt
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+pip-wheel-metadata/
 
-# Swift Package Manager
-.build/
-Packages/
-Package.pins
-Package.resolved
-.swiftpm/xcode/package.xcworkspace/
+# Installer/runtime logs
+*.log
 
-# CocoaPods
-Pods/
-Podfile.lock
-
-# Carthage
-Carthage/Build/
-
-# Fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
-
-# Archives
-*.xcarchive
-
-# Xcode Server
-*.xcscheme
-*.xctestrun
-
-# Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-# App data
+# Local app data and databases
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
 
-# macOS
+# OS/editor noise
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon?
 Icon?
+.vscode/
+.idea/
+
+# Local scratch patches
+*.diff
+*.patch

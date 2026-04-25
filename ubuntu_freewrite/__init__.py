@@ -1,0 +1,1 @@
+"""Freewrite Ubuntu application package."""
