@@ -1,24 +1,26 @@
 /* Minimal, fast, calm. No JS. */
 :root {
   --bg: #f6f3ee;
-  --panel: rgba(0, 0, 0, 0.035);
+  --paper: rgba(255, 255, 255, 0.62);
+  --panel: rgba(255, 255, 255, 0.42);
   --text: rgba(0, 0, 0, 0.88);
   --muted: rgba(0, 0, 0, 0.62);
   --faint: rgba(0, 0, 0, 0.12);
   --accent: #111111;
-  --shadow: 0 18px 55px rgba(0, 0, 0, 0.10);
-  --radius: 18px;
+  --shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
+  --radius: 14px;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
     --bg: #f6f3ee;
-    --panel: rgba(0, 0, 0, 0.035);
+    --paper: rgba(255, 255, 255, 0.62);
+    --panel: rgba(255, 255, 255, 0.42);
     --text: rgba(0, 0, 0, 0.88);
     --muted: rgba(0, 0, 0, 0.62);
     --faint: rgba(0, 0, 0, 0.12);
     --accent: #111111;
-    --shadow: 0 18px 55px rgba(0, 0, 0, 0.10);
+    --shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
   }
 }
 
@@ -33,12 +35,19 @@ body {
 
 body {
   margin: 0;
-  background: radial-gradient(900px 700px at 18% 12%, rgba(0, 0, 0, 0.045), transparent 55%),
-    radial-gradient(700px 520px at 88% 28%, rgba(0, 0, 0, 0.035), transparent 60%), var(--bg);
+  background: radial-gradient(1200px 900px at 30% 10%, rgba(0, 0, 0, 0.04), transparent 58%),
+    radial-gradient(900px 650px at 90% 25%, rgba(0, 0, 0, 0.03), transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.018) 0px,
+      rgba(0, 0, 0, 0.018) 1px,
+      transparent 1px,
+      transparent 18px
+    ),
+    var(--bg);
   color: var(--text);
-  font: 16px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
-    Helvetica, Arial, sans-serif;
-  letter-spacing: 0.01em;
+  font: 17px/1.62 ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: 0.005em;
 }
 
 a {
@@ -74,7 +83,7 @@ code {
   padding: 6px 10px;
   border: 1px solid var(--faint);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
+  background: var(--paper);
   color: var(--muted);
   font-size: 13px;
 }
@@ -83,7 +92,7 @@ h1 {
   margin: 14px 0 8px;
   font-size: clamp(40px, 6vw, 56px);
   line-height: 1.04;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 .lede {
@@ -105,16 +114,16 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--faint);
-  background: rgba(255, 255, 255, 0.72);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  background: rgba(255, 255, 255, 0.78);
   text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .btn:hover {
-  border-color: rgba(0, 0, 0, 0.30);
-  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(0, 0, 0, 0.34);
+  background: rgba(255, 255, 255, 0.94);
 }
 
 .btn.ghost {
@@ -126,10 +135,9 @@ h1 {
   margin: 14px 0;
   padding: 20px 18px;
   border-radius: var(--radius);
-  border: 1px solid var(--faint);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   background: var(--panel);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
 }
 
 h2 {
@@ -158,7 +166,7 @@ h2 {
   padding: 14px 14px;
   border-radius: 14px;
   border: 1px solid var(--faint);
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.70);
   overflow: auto;
 }
 
